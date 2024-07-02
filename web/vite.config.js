@@ -5,7 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 
 const upstream = {
-  target: process.env.IMMICH_SERVER_URL || 'http://immich-server:3001/',
+  target: 'https://demo.immich.app/',
   secure: true,
   changeOrigin: true,
   logLevel: 'info',
