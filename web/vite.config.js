@@ -5,7 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 
 const upstream = {
-  target: 'https://demo.immich.app/',
+  target: 'https://lumin.home31.pw/',
   secure: true,
   changeOrigin: true,
   logLevel: 'info',
