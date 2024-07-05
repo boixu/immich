@@ -23,6 +23,7 @@ const routes: Route[] = [
         mode: "true",
         resources: [],
       },
+     },
     },
   },
   {
