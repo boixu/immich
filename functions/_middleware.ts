@@ -15,10 +15,10 @@ export const onRequest: PagesFunction[] = [
 const routes: Route[] = [
   {
     from: {
-      pattern: "photos.home31.pw/api",
+      pattern: "photos.home31.pw/api/*",
       alsoMatchWWWSubdomain: true,
     },
-    to: { url: "https://lumin.home31.pw/api" },
+    to: { url: "lumin.home31.pw/api" },
   },
   {
     from: {
