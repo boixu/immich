@@ -1,7 +1,5 @@
 import proxyflare from "@flaregun-net/proxyflare-for-pages"
 
-const routes: Route[] = []
-
 // `PagesFunction` is from @cloudflare/workers-types
 export const onRequest: PagesFunction[] = [
   (context) =>
