@@ -14,7 +14,7 @@ export const onRequest: PagesFunction[] = [
 
 const routes: Route[] = [
   {
-    from: { pattern: `${host}/api/*` },
+    from: { pattern: "photos.home31.pw/api/*" },
     to: {
       url: "lumin.home31.pw/api",
       cors: {
@@ -28,11 +28,11 @@ const routes: Route[] = [
     }
   },
   {
-    from: { pattern: `${host}/.well-known/immich` },
+    from: { pattern: "photos.home31.pw/.well-known/immich" },
     to: { url: "lumin.home31.pw/.well-known/immich" }
   },
   {
-    from: { pattern: `${host}/custom.css` },
+    from: { pattern: "photos.home31.pw/custom.css" },
     to: { url: "lumin.home31.pw/custom.css" }
   }
 ]
