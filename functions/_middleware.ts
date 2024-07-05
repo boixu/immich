@@ -15,24 +15,31 @@ export const onRequest: PagesFunction[] = [
 const routes: Route[] = [
   {
     from: {
-      pattern: "photos.home31.pw/api/*",
-      alsoMatchWWWSubdomain: true,
+      { pattern: `${host}/api/*` },
     },
-    to: { url: "lumin.home31.pw/api" },
+    to: {
+      url: "lumin.home31.pw/api",
+      cors: {
+        origin: true,
+        methods: "*",
+        exposedHeaders: [],
+        allowedHeaders: [],
+        credentials: true,
+        maxAge: 3600,
+      },
+    },
+  {
+    from: {
+      { pattern: `${host}/.well-known/immich` },
+    },
+    to: { url: "lumin.home31.pw/.well-known/immich" },
   },
   {
     from: {
-      pattern: "photos.home31.pw/.well-known/immich",
-      alsoMatchWWWSubdomain: true,
+      { pattern: `${host}/custom.css` },
     },
-    to: { url: "https://lumin.home31.pw/.well-known/immich" },
-  },
-  {
-    from: {
-      pattern: "photos.home31.pw/custom.css",
-      alsoMatchWWWSubdomain: true,
-    },
-    to: { url: "https://lumin.home31.pw/custom.css" },
+    to: { url: "lumin.home31.pw/custom.css" },
   },
 
 ]
+
