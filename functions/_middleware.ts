@@ -12,28 +12,19 @@ export const onRequest: PagesFunction[] = [
   // other Pages plugins and middleware
 ]
 
-const routes: Route[] = [
+const apiRoute: Route [] = [
   {
     from: { pattern: "photos.home31.pw/api/*" },
-    to: {
-      url: "lumin.home31.pw/api",
-      cors: {
-        origin: true,
-        methods: "*",
-        exposedHeaders: [],
-        allowedHeaders: [],
-        credentials: true,
-        maxAge: 3600,
-      }
-    }
+    to: { url: "lumin.home31.pw/api" },
   },
   {
     from: { pattern: "photos.home31.pw/.well-known/immich" },
-    to: { url: "lumin.home31.pw/.well-known/immich" }
+    to: { url: "lumin.home31.pw/.well-known/immich" },
   },
   {
     from: { pattern: "photos.home31.pw/custom.css" },
-    to: { url: "lumin.home31.pw/custom.css" }
+    to: { url: "lumin.home31.pw/custom.css" },
   }
 ]
 
+const routes = [apiRoute]
