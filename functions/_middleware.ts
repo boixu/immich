@@ -14,9 +14,7 @@ export const onRequest: PagesFunction[] = [
 
 const routes: Route[] = [
   {
-    from: {
-      { pattern: `${host}/api/*` },
-    },
+    from: { pattern: `${host}/api/*` },
     to: {
       url: "lumin.home31.pw/api",
       cors: {
@@ -26,20 +24,15 @@ const routes: Route[] = [
         allowedHeaders: [],
         credentials: true,
         maxAge: 3600,
-      },
-    },
+      }
+    }
   {
-    from: {
-      { pattern: `${host}/.well-known/immich` },
-    },
-    to: { url: "lumin.home31.pw/.well-known/immich" },
+    from: { pattern: `${host}/.well-known/immich` },
+    to: { url: "lumin.home31.pw/.well-known/immich" }
   },
   {
-    from: {
-      { pattern: `${host}/custom.css` },
-    },
-    to: { url: "lumin.home31.pw/custom.css" },
-  },
-
+    from: { pattern: `${host}/custom.css` },
+    to: { url: "lumin.home31.pw/custom.css" }
+  }
 ]
 
