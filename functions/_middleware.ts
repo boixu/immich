@@ -27,5 +27,12 @@ const routes: Route[] = [
     },
     to: { url: "https://lumin.home31.pw/.well-known/immich" },
   },
+  {
+    from: {
+      pattern: "photos.home31.pw/custom.css",
+      alsoMatchWWWSubdomain: true,
+    },
+    to: { url: "https://lumin.home31.pw/custom.css" },
+  },
 
 ]
