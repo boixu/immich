@@ -26,6 +26,7 @@ const routes: Route[] = [
         maxAge: 3600,
       }
     }
+  },
   {
     from: { pattern: `${host}/.well-known/immich` },
     to: { url: "lumin.home31.pw/.well-known/immich" }
